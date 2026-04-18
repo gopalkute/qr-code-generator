@@ -8,7 +8,7 @@ export default function App() {
   const generateQR = async () => {
     if (!url) return alert("Please enter a URL!");
     try {
-      const res = await axios.post("https://qr-code-generator-five-indol.vercel.app/generate", { url });
+      const res = await axios.post("http://localhost:5000/generate", { url });
       setQrImage(res.data.qrImage);
     } catch (err) {
       alert("Error generating QR code");
