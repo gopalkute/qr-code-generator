@@ -21,4 +21,8 @@ app.post("/generate", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the QR Code Generator API!");
+});
+
 app.listen(5000, () => console.log("Server running on http://localhost:5000"));
